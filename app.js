@@ -4,8 +4,10 @@ const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 const UserSchema = require("./UserSchema");
 const session = require("express-session");
+const isAuth = require("./middleware/isAuth")
 const mongoDBSession = require("connect-mongodb-session")(session);
 const jwt = require("jsonwebtoken");
+const { cleanUpAndValidate, jwtSign } = require("./utils/AuthUtils")
 
 const {
   cleanUpAndValidate,

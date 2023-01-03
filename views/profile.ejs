@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Profile-Page </title>
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+            }
+
+            button {
+                  background-color: #333;
+                  width: 100%;
+                  color: #eee;
+                  padding: 10px;
+                  margin: 10px 5px;
+                  border: none;
+                  cursor: pointer;
+            }
+
+            form {
+                  border: 3px solid whitesmoke;
+            }
+
+            input[type=text],
+            input[type=number],
+            input[type=password] {
+                  width: 100%;
+                  margin: 10px 0;
+                  padding: 10px 20px;
+                  display: inline-block;
+                  border: 1px solid #1b1b1b;
+                  box-sizing: border-box;
+            }
+
+            .cancelbtn {
+                  width: auto;
+                  padding: 10px 18px;
+                  margin: 5px 5px;
+            }
+
+
+            .container {
+                  padding: 20px;
+                  margin: 2px;
+                  background-color: mediumorchid;
+            }
+      </style>
+</head>
+
+<body>
+      <center>
+            <h1> Profile </h1>
+      </center>
+      <form action='/profile' method="POST">
+            <img src="*">
+            <div class="container">
+                  <label for="name">Name : </label>
+                  <input type="text" placeholder="Enter Name" value=<%=name %> name="name" required>
+                  <label for="email">Email : </label>
+                  <input type="text" placeholder="Enter Email" value=<%=email %> name="email" readonly>
+                  <label for="username">Username : </label>
+                  <input type="text" placeholder="Enter Username" value=<%=username %> name="username" readonly>
+                  <label for="phonenumber">Phone Number :</label>
+                  <input type="number" placeholder="Enter Phone Number" value=<%=phoneNumber %> name="phonenumber"
+                  required>
+
+                  <label for="CollegeName">CollegeName : </label>
+                  <input type="text" placeholder="Enter CollegeName" value=<%=college %> name="CollegeName" required>
+                  <label for="State">State : </label>
+                  <input type="text" placeholder="Enter State" value=<%=state %> name="State" required>
+                  <label for="Country">Country : </label>
+                  <input type="text" placeholder="Enter Country" value=<%=country %> name="Country" required>
+                  <button type="submit">Save</button>
+            </div>
+      </form>
+      <script src="/browser.js"></script>
+</body>
+
+</html>
